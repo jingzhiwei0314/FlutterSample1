@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app/ui/ListViewRoute.dart';
 import 'package:flutter_app/app/ui/LoginRoute.dart';
 import 'package:flutter_app/common/DomainType.dart';
 import 'package:flutter_app/common/bean/BaseException.dart';
@@ -164,6 +165,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     onError,
                     "4a16e37a14845f0e42a12a26e34934e21ae6e394058c644a5b64f6970239b1fa",
                     "gQwFOfhf5UhgHvHVsqKq+4hVXQaaSmH2+qDDNxsE/ZHZkSieMoVdIA+DyOyMTIRun3S9uVvyoN6jMxbxfk7y4+vWYPmIU4s5oZZAuL3Hd8vv0Xe5CJhoITnip1MrdMvjlGxBJzV581EQMB/oieh9gtJfTkKi");
+              },
+            ),
+            RaisedButton.icon(
+              icon: Icon(Icons.add),
+              label: Text("列表页"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return ListViewRoute();
+                }));
               },
             ),
             RaisedButton(
